@@ -1,0 +1,108 @@
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    gap: 15px;
+}
+.year-view {
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 10px 5px;
+    gap: 20px;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+    /* box-shadow: 0px 14px 5px -15px #111; */
+}
+.arrow-btn {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    padding: 0 5px;
+}
+.arrow-btn svg {
+    height: 15px;
+    width: 15px;
+}
+.year-label {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* margin: 0 auto 20px; */
+}
+.week-days,
+.cal-days {
+    display: flex;
+    gap: 5px;
+}
+.days-label {
+    text-transform: uppercase;
+    width: 50px;
+    text-align: center;
+    font-weight: 600;
+}
+.calendar-days-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.calendar-tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 40px;
+}
+.calendar-tile:nth-child(n + 6) {
+    color: red;
+}
+.in-prev-month,
+.in-next-month {
+    opacity: 0.3;
+    pointer-events: none;
+    /* visibility: hidden; */
+}
+.today {
+    background-color: #009e6c;
+    color: #fff;
+}
+#day {
+    cursor: default;
+}
+.event:hover .content {
+    display: block;
+}
+.blue {
+    background: #6a53ff;
+}
+.red {
+    background: #ff0000;
+}
+.content {
+    display: none;
+    position: absolute;
+    background: black;
+    margin: 8px 0 0 auto;
+    color: #ffffff;
+    padding: 5px 10px;
+    /* width: 100px; */
+    z-index: 1;
+}
+.disabled {
+    background: #000000;
+    opacity: 0.3;
+    pointer-events: none;
+}
+button:disabled {
+    cursor: default;
+}
